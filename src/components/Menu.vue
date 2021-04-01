@@ -1,0 +1,47 @@
+<template lang="html">
+  <nav class="menu">
+    <ul>
+      <li>
+        <a href="#">
+          <span class="iso-logo" id="logo">$ krloz.dev</span>
+        </a>
+      </li>
+      <li><a href="#">ABOUT ME</a></li>
+      <li><a href="#">EN</a> | <a href="#">ES</a></li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+export default {
+  name: 'menu'
+}
+</script>
+
+<style scoped>
+.menu {
+  background: #3D3D3D;
+  opacity: 0.8;
+  color: white;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu ul li {
+  font-weight: 300;
+  list-style: none;
+  padding: 16px 16px 16px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.iso-logo {
+  color: #4CFF89;
+}
+</style>
