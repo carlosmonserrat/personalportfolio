@@ -1,14 +1,19 @@
 <template>
-  <Menu msg="Welcome to Your Vue.js App"/>
+  <Menu/>
+  <div class="container">
+    <Sections/>
+  </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue'
+import Sections from './components/Sections.vue'
 
 export default {
   name: 'App',
   components: {
-    Menu
+    Menu,
+    Sections
   }
 }
 </script>
@@ -22,5 +27,8 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.container{
+
 }
 </style>

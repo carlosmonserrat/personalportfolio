@@ -1,37 +1,40 @@
 <template lang="html">
 
-  <section class="sections">
-    <h1>sections Component</h1>
+  <section
+      class="sections"
+      v-for="section in sections"
+      v-bind:key="section.id">
+    <h3>{{ section.category }}</h3>
   </section>
 
 </template>
 
 <script lang="js">
+import axios from 'axios'
 
-  export default  {
-    name: 'sections',
-    props: [],
-    mounted () {
-
-    },
-    data () {
-      return {
-
-      }
-    },
-    methods: {
-
-    },
-    computed: {
-
+export default {
+  name: 'sections',
+  data() {
+    return {
+      sections: []
     }
+  },
+  async mounted() {
+    this.sections = await this.fetchSections()
+  },
+  methods: {
+    async fetchSections() {
+      return await (await axios.get("/mockup/test.json")).data
+    }
+  },
+  computed: {}
 }
 
 
 </script>
 
-<style scoped lang="scss">
-  .sections {
-
-  }
+<style scoped>
+.sections {
+  color: white;
+}
 </style>
