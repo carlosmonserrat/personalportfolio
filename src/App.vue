@@ -1,19 +1,32 @@
 <template>
   <Menu/>
   <div class="container">
-    <Sections/>
+    <Sections :sections="sections"/>
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue'
 import Sections from './components/Sections.vue'
+import axios from "axios";
 
 export default {
-  name: 'App',
+  name: 'App',  data() {
+    return {
+      sections: []
+    }
+  },
   components: {
     Menu,
     Sections
+  },
+  async mounted() {
+    this.sections = await this.fetchSections()
+  },
+  methods: {
+    async fetchSections() {
+      return await (await axios.get("/mockup/test.json")).data
+    }
   }
 }
 </script>

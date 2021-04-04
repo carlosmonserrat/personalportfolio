@@ -16,5 +16,23 @@
         "content": "API stands for Application Programming Interface. A Web API is an application programming interface for the Web. A Browser API can extend the functionality of a web browser. A Server API can extend the functionality of a web server."
       }
     ]
+  },
+  {
+    "id": "FRONTEND",
+    "category": "Frontend",
+    "pictureUrl": "https://miro.medium.com/max/1640/1*Y4Td-XMRtuFAW_8CpO7KyA.png",
+    "description": "In software engineering, the terms front end and back end refer to the separation of concerns between the presentation layer (front end), and the data access layer (back end) of a piece of software, or the physical infrastructure or hardware. In the client–server model, the client is usually considered the front end and the server is usually considered the back end, even when some presentation work is actually done on the server itself.",
+    "articles": [
+      {
+        "title": "Multiparadigm development",
+        "pictureUrl": "https://neerc.ifmo.ru/wiki/images/8/85/Scala_logo.png",
+        "content": "Scala combines object-oriented and functional programming in one concise, high-level language. Scala's static types help avoid bugs in complex applications, and its JVM and JavaScript runtimes let you build high-performance systems with easy access to huge ecosystems of libraries."
+      },
+      {
+        "title": "Creating a rest service with Scala, series 1",
+        "pictureUrl": "https://www.svgrepo.com/show/261808/api.svg",
+        "content": "API stands for Application Programming Interface. A Web API is an application programming interface for the Web. A Browser API can extend the functionality of a web browser. A Server API can extend the functionality of a web server."
+      }
+    ]
   }
 ]
