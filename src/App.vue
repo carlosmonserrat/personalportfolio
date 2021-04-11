@@ -1,13 +1,14 @@
 <template>
   <Menu/>
   <div class="container">
-    <Sections :sections="sections"/>
+ 
+ 
+
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue'
-import Sections from './components/Sections.vue'
 import axios from "axios";
 
 export default {
@@ -17,8 +18,7 @@ export default {
     }
   },
   components: {
-    Menu,
-    Sections
+    Menu
   },
   async mounted() {
     this.sections = await this.fetchSections()
