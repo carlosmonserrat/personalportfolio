@@ -1,5 +1,4 @@
 <style>
-
     .blog {
         background-color: white;
         padding: 32px;
@@ -44,16 +43,15 @@
 
 
 <div class="blog">
+ 
     <div class="container">
 
         <h2>Programando en Scala</h2>
-        <iframe class="video" width="100%" height="315"
-                src="https://www.youtube.com/embed/mPNsNLf22cA">
+        <iframe class="video" width="100%" height="315" src="https://www.youtube.com/embed/mPNsNLf22cA">
         </iframe>
         <div class="autor">
             Carlos Rojas - 31 Mayo 2021
         </div>
-
 
         <p><span class="first-font">A</span> menudo la programación funcional es vista como un paradigma orientado
             a la investigación y cumple un rol importante en la academia.
@@ -79,38 +77,19 @@
             disciplina de matemáticas aplicadas, la ingeniería de software requiere que combinemos las soluciones
             técnicas con los problemas comerciales. Modelar el dominio enfocandolo en una representación de objetos del
             mundo real es la manera en que la programacion orientada a objetos pretende cerrar esa brecha
-            <span class="dot"></span></p>
+            <span class="dot"></span>
+        </p>
 
-        <pre>
-            <h1><a href="code.html">full screen</a></h1>
+        <pre class="full">
             <code class="language-scala">
-package docs.http.scaladsl
 
-import akka.actor.typed.ActorSystem
-import akka.actor.typed.scaladsl.Behaviors
-import akka.http.scaladsl.Http
-import akka.http.scaladsl.model._
 
-import scala.concurrent.Future
-import scala.util.{ Failure, Success }
+ println("hola")
 
-object HttpClientSingleRequest {
-  def main(args: Array[String]): Unit = {
-    implicit val system = ActorSystem(Behaviors.empty, "SingleRequest")
-    // needed for the future flatMap/onComplete in the end
-    implicit val executionContext = system.executionContext
-
-    val responseFuture: Future[HttpResponse] = Http().singleRequest(HttpRequest(uri = "http://akka.io"))
-
-    responseFuture
-      .onComplete {
-        case Success(res) => println(res)
-        case Failure(_)   => sys.error("something wrong")
-      }
-  }
-}</code>
+            </code>
             </pre>
+
+
 
     </div>
 </div>
-

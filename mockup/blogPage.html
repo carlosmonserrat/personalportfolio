@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head mocks="Head.html">
 </head>
+
 <body>
-<script src="js/mocks.js">
-</script>
+    <script src="js/mocks.js"></script>
 
-<div mocks="components/menu.html"></div>
+    <div mocks="components/menu.html"></div>
 
-<div class="container">
-    <div mocks="components/blog.html"></div>
+    <div class="container">
+        <div mocks="components/blog.html"></div>
+    </div>
+  
+    <script>
+        includeHTML();
+    </script>
+ <style>
+     .scastie .code .cm-s-solarized.cm-s-dark, .scastie .configuration .cm-s-solarized.cm-s-dark {
+    color: #839496;
+    background-color: black;
+    width: 100%;
+    
+}
 
-</div>
+.CodeMirror-code {
+    width: 100%;
+}
 
+pre.CodeMirror-line{
+    width: 100%;
+}
 
-<script>
-    includeHTML();
-</script>
+.scastie.embedded {
+    width: 100%; 
+   margin: 10px auto; 
+    padding: 10px 0; 
+}
+.CodeMirror-scroll, .CodeMirror-sizer, .CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber {
+  box-sizing:  content-box; 
+  background-color: black;
+ color:rgb(187, 187, 187)
+}
 
-
+ </style>
+  <script src="https://scastie.scala-lang.org/embedded.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            // all option
+            scastie.Embedded('.full', {
+                theme: 'dark', // default: 'light'; ('dark' or 'light')
+                isWorksheetMode: true,
+                code: '1 + 1', // default: DOM node content
+                sbtConfig: 'libraryDependencies += "org.json4s" %% "json4s-native" % "3.5.2"',
+                targetType: 'jvm',  // jvm, dotty, typelevel, js
+                scalaVersion: '2.12.4'
+            });
+        });
+    </script>
 
 </body>
 
