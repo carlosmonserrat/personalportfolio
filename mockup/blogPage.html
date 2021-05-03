@@ -12,39 +12,46 @@
     <div class="container">
         <div mocks="components/blog.html"></div>
     </div>
-  
+
     <script>
         includeHTML();
     </script>
- <style>
-     .scastie .code .cm-s-solarized.cm-s-dark, .scastie .configuration .cm-s-solarized.cm-s-dark {
-    color: #839496;
-    background-color: black;
-    width: 100%;
-    
-}
 
-.CodeMirror-code {
-    width: 100%;
-}
+    <style>
+        .scastie .code .cm-s-solarized.cm-s-dark,
+        .scastie .configuration .cm-s-solarized.cm-s-dark {
+            color: #839496;
+            background-color: black;
+            width: 100%;
+        }
 
-pre.CodeMirror-line{
-    width: 100%;
-}
+        .CodeMirror-code {
+            width: 100%;
+        }
 
-.scastie.embedded {
-    width: 100%; 
-   margin: 10px auto; 
-    padding: 10px 0; 
-}
-.CodeMirror-scroll, .CodeMirror-sizer, .CodeMirror-gutter, .CodeMirror-gutters, .CodeMirror-linenumber {
-  box-sizing:  content-box; 
-  background-color: black;
- color:rgb(187, 187, 187)
-}
+        pre.CodeMirror-line {
+            width: 100%;
+        }
 
- </style>
-  <script src="https://scastie.scala-lang.org/embedded.js"></script>
+        .scastie.embedded {
+            width: 100%;
+            margin: 10px auto;
+            padding: 10px 0;
+        }
+
+        .CodeMirror-scroll,
+        .CodeMirror-sizer,
+        .CodeMirror-gutter,
+        .CodeMirror-gutters,
+        .CodeMirror-linenumber {
+            box-sizing: content-box;
+            background-color: black;
+            color: rgb(187, 187, 187)
+        }
+    </style>
+
+    <script src="https://scastie.scala-lang.org/embedded.js"></script>
+
     <script>
         window.addEventListener('load', function () {
             // all option
@@ -58,7 +65,6 @@ pre.CodeMirror-line{
             });
         });
     </script>
-
 </body>
 
 </html>
