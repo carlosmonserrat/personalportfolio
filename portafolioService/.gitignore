@@ -1,0 +1,16 @@
+logs
+target
+*.idea
+*/.idea
+*/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+project/project/
+project/target/
+test-2.11/
+.ivy2
+*.log
+/.run/
+*.bsp
