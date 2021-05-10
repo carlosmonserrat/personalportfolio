@@ -7,13 +7,14 @@ import akka.http.scaladsl.server.Route
 import logging.Logging
 import scaldi.akka.AkkaInjectable
 import scaldi.{Injectable, Injector}
+
 import scala.concurrent.ExecutionContextExecutor
 import scala.concurrent.duration.{FiniteDuration, MINUTES}
 import scala.util.{Failure, Success}
 
 class Routes(implicit injector: Injector) extends Injectable with AkkaInjectable with Logging {
 
-  implicit private val system: ActorSystem =  ActorSystem("portafolioRoutes")
+  implicit private val system: ActorSystem = ActorSystem("portafolioRoutes")
   implicit private val executionContext: ExecutionContextExecutor = system.dispatcher
   private val akkaHttpRequestTimeout: FiniteDuration = FiniteDuration(5, MINUTES)
 

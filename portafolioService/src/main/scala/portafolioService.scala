@@ -1,5 +1,4 @@
 import akkahttp.Routes
-
 import logging.Logging
 import scaldi.akka.AkkaInjectable
 
