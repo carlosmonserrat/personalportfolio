@@ -2,21 +2,14 @@
   <nav class="menu">
     <ul>
       <li>
-        <a href="#">
+        <router-link :to="{ name: 'Home' }">
           <span class="iso-logo" id="logo">$ krloz.dev</span>
-        </a>
+        </router-link>
       </li>
-      <li><a href="#">ABOUT ME</a></li>
       <li><a href="#">EN</a> | <a href="#">ES</a></li>
     </ul>
   </nav>
 </template>
-
-<script>
-export default {
-  name: 'menu'
-}
-</script>
 
 <style scoped>
 .menu {

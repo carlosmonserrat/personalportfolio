@@ -1,5 +1,5 @@
 <template lang="html">
- <h1></h1>
+ <h1>Hola</h1>
 </template>
 
 <script lang="js">

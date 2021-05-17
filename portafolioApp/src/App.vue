@@ -1,18 +1,17 @@
 <template>
-  <Menu/>
-  <div class="container">
- 
- 
+    <Menu/>
 
-  </div>
+    <router-view />
 </template>
 
 <script>
-import Menu from './components/Menu.vue'
+import Menu from '@/components/Menu.vue'
+
 import axios from "axios";
 
 export default {
-  name: 'App',  data() {
+  name: 'App',
+  data() {
     return {
       sections: []
     }
@@ -31,17 +30,13 @@ export default {
 }
 </script>
 
-<style>
-body {
-  background-color: #2c2c2c;
-}
+<style scoped>
+
 
 #app {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.container{
 
-}
 </style>
